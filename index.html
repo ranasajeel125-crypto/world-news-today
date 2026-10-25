@@ -591,6 +591,20 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"france-protests-next-round", cat:"world", title:"French Protest Groups Call for More Rallies as Macron Faces Tight Choices",
+  excerpt:"Unions and protest groups called on Sunday for fresh demonstrations next Saturday and a nationwide strike on 5 November, after a huge police operation contained Saturday's nationwide rallies across France.",
+  author:"Maria Santos", role:"Europe Correspondent", date:"25 Oct 2026", read:3,
+  caption:"Protesters march in France during Saturday's nationwide rallies, which drew 410,000 people according to the Interior Ministry.",
+  source:{ name:"Reuters — French protest groups demand more rallies as Macron faces tough choices", url:"https://www.reuters.com/world/europe/french-protest-groups-demand-more-rallies-macron-faces-tough-choices-2026-10-25/" },
+  tags:["france","protests","macron","paris","living costs"],
+  body:[
+    "French protest groups and unions called on Sunday for further demonstrations as they sought to maintain pressure on the government, after a huge security operation helped to contain unrest during nationwide rallies on Saturday.",
+    "The Interior Ministry said 410,000 people took part in Saturday's marches as authorities deployed 70,000 police, helping to avert a repeat of the looting and vandalism that swept many cities on 17 October. Some 1,314 people were arrested on Saturday, half of last week's numbers, and about 50 police were injured, compared with more than 1,000 last week.",
+    "Labour leaders urged further protests next Saturday and a nationwide strike on 5 November, saying frustration over wages, living costs and public services was spreading far beyond the student movement that first mobilised last month. \u201cWe see an aggregation of anger,\u201d Murielle Guilbert, co-leader of the left-wing Solidaires trade union federation, told BFM TV, adding: \u201cWe call on people to take to the streets next Saturday.\u201d The SUD Education teaching union said it would join the 31 October demonstration, while the large CGT union said it would decide during the week. The Yellow Vests, the grassroots movement that emerged in 2018 as a revolt against fuel taxes, also called for mass rallies next Saturday, including sit-ins outside town halls and the National Assembly.",
+    "President Emmanuel Macron's scope to respond is minimal. In 2019 he was able to find the resources to reduce fuel costs in response to the Yellow Vests; seven years on, strained public finances leave him with little room to meet protesters' demands. His mandate also expires next April and his centrist party no longer has the majority needed to pass major legislation. The government has begun talks with unions and student representatives, but protest leaders say the measures proposed so far are inadequate. \u201cWe have received no response at all from this government,\u201d said Guilbert. Police unions said on Sunday they did not have enough staff to maintain for any length of time the high level of deployment that on Saturday helped to limit disorder to sporadic clashes in a number of cities, including Paris and Marseille.",
+    "The protests have resonated beyond France's borders. On Saturday, Belgian police used tear gas and pepper spray as they clashed in Brussels with anti-government demonstrators. In Albania, peaceful protests that began at the end of May turned into violent unrest, and skirmishes have taken place in several Italian cities for a second week running."
+  ]},
+
 { slug:"europe-protests", cat:"world", title:"Protests Sweep European Capitals as Anger Over Living Costs Boils Over",
   excerpt:"Demonstrators clashed with police and set fires in cities across the continent on Saturday, as marches over economic policies, rising living costs and welfare cuts turned violent in Italy, Spain and Belgium.",
   author:"Maria Santos", role:"Europe Correspondent", date:"25 Oct 2026", read:4,
@@ -839,7 +853,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake","eu-china-carbon"];
+  var latestOrder = ["france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -855,11 +869,11 @@ var ARTICLES = [
     return '<article><span class="bignum">'+esc(a.type.toUpperCase())+'</span><h3><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></h3><p>'+esc(a.excerpt)+'</p><span class="meta">By <b style="color:#e8e9eb">'+esc(a.author)+'</b> · '+a.date+' · '+a.read+' min read</span></article>';
   }).join("");
 
-  var moreOrder = ["serbia-election","eu-china-carbon","kelp-forests","tibet-earthquake","israel-election-crossings","india-uk-tech-talks","mumbai-baseball-cricket","imf-developing-economies"];
+  var moreOrder = ["france-protests-next-round","serbia-election","eu-china-carbon","kelp-forests","tibet-earthquake","israel-election-crossings","india-uk-tech-talks","mumbai-baseball-cricket","imf-developing-economies"];
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
