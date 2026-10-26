@@ -591,6 +591,22 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"lula-reelected-brazil", cat:"world", title:"Lula Wins Fourth Term as Brazil's President; Bolsonaro Refuses to Concede",
+  excerpt:"Leftist President Luiz Inacio Lula da Silva won Brazil's presidential runoff on Sunday to secure a fourth non-consecutive term, the country's electoral authority said, while right-wing Senator Flavio Bolsonaro refused to concede and said he would seek to annul the result.",
+  author:"Rafael Costa", role:"Latin America Correspondent", date:"26 Oct 2026", read:3,
+  caption:"Lula, 80, overturned the first-round outcome to win a fourth term as Brazil's president.",
+  source:{ name:"Reuters — Brazil's Lula reelected president in runoff vote", url:"https://www.reuters.com/world/americas/brazils-lula-reelected-president-runoff-vote-2026-10-26/" },
+  tags:["brazil","lula","flavio bolsonaro","election","latin america"],
+  body:[
+    "Leftist President Luiz Inacio Lula da Silva won Brazil's presidential election, the country's electoral authority said on Sunday, defeating right-wing Senator Flavio Bolsonaro in a runoff to secure a fourth non-consecutive term.",
+    "Lula, 80, overturned the outcome from the first round of voting, in which Bolsonaro had picked up 47% of ballots cast to Lula's 45%. Lula's fourth term begins in January.",
+    "Bolsonaro, the son of former President Jair Bolsonaro, refused to concede defeat. He called into question a late-Sunday decision by a Lula-appointed Supreme Court justice that extended voting by two hours over alleged voter transport irregularities, and said he would ask for the result to be annulled.",
+    "\u201cIt is impossible to recognize the election results, given the circumstances under which things unfolded,\u201d Bolsonaro told journalists.",
+    "Yet the scale of the loss, with Bolsonaro trailing Lula by over 4 million votes, makes it unlikely his efforts to annul the vote will succeed, analysts said. His petition is also undermined by the fact that his campaign also sought a voting extension due to heavy rains in the conservative-leaning south.",
+    "Bolsonaro's refusal to concede could spark a wave of protests in a country where faith in the electoral system, and in judicial independence, has been strained in recent years, observers said. Jair Bolsonaro plunged Brazil into a deep democratic crisis after the election in 2022, when his supporters stormed government buildings in protest against the result. He later received a 27-year sentence for plotting a coup.",
+    "Leaders across Latin America congratulated Lula on his victory, with Mexico's President Claudia Sheinbaum saying \u201cthe people of Brazil won\u201d and Paraguay's President Santiago Pena saluting \u201cthis great democratic journey.\u201d"
+  ]},
+
 { slug:"gandhi-acquitted-defamation-case", cat:"world", title:"Indian Opposition Leader Rahul Gandhi Acquitted in Defamation Case",
   excerpt:"A court in the northern town of Sultanpur acquitted Congress leader Rahul Gandhi on Monday in a defamation case over a 2018 campaign speech, television channels reported, as supporters celebrated outside the court.",
   author:"Arjun Mehta", role:"South Asia Correspondent", date:"26 Oct 2026", read:3,
@@ -900,7 +916,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -916,11 +932,11 @@ var ARTICLES = [
     return '<article><span class="bignum">'+esc(a.type.toUpperCase())+'</span><h3><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></h3><p>'+esc(a.excerpt)+'</p><span class="meta">By <b style="color:#e8e9eb">'+esc(a.author)+'</b> · '+a.date+' · '+a.read+' min read</span></article>';
   }).join("");
 
-  var moreOrder = ["gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","serbia-election","eu-china-carbon","kelp-forests","tibet-earthquake","israel-election-crossings","india-uk-tech-talks","mumbai-baseball-cricket","imf-developing-economies"];
+  var moreOrder = ["lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","serbia-election","eu-china-carbon","kelp-forests","tibet-earthquake","israel-election-crossings","india-uk-tech-talks","mumbai-baseball-cricket","imf-developing-economies"];
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
