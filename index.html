@@ -591,6 +591,23 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"houthi-attacks-saudi-flights", cat:"world", title:"Houthi Attacks Ground Almost Nine in Ten Flights at Riyadh Airport, Data Shows",
+  excerpt:"Attacks by Yemen's Iran-aligned Houthis have nearly emptied the skies over Riyadh this month, with about 86% of scheduled flights at the Saudi capital's airport cancelled between October 8 and October 25, aviation data showed on Monday.",
+  author:"Layla Haddad", role:"Middle East Correspondent", date:"26 Oct 2026", read:3,
+  caption:"Riyadh's King Khalid International Airport has been struck repeatedly this month, including an attack on October 10 that killed 13 people.",
+  source:{ name:"Reuters — How Houthi attacks have grounded flights across Saudi Arabia", url:"https://www.reuters.com/world/middle-east/how-houthi-attacks-have-grounded-flights-across-saudi-arabia-2026-10-26/" },
+  tags:["saudi arabia","riyadh","houthis","yemen","flights","aviation"],
+  body:[
+    "Attacks by Yemen's Iran-aligned Houthis have nearly emptied the skies over Riyadh this month, aviation data showed on Monday, with cancellations grounding almost nine out of every 10 scheduled flights at the Saudi capital's airport.",
+    "About 86% of scheduled flights at Riyadh's King Khalid International Airport, or 4,071 out of 4,736, were cancelled between October 8 and October 25, according to the latest data from aviation analytics firm Cirium.",
+    "The Houthis have stepped up attacks on Saudi Arabia this month, targeting airports, ports and oil facilities with ballistic missiles and drones. Riyadh's airport, the kingdom's second-busiest after Jeddah, has been struck repeatedly, including an attack on October 10 that killed 13 people, the deadliest in the kingdom in more than a decade.",
+    "Saudi authorities partially reopened the airport on Sunday after a halt that had started on October 10. Domestic flights resumed from Terminal 1, while national carriers were allowed to operate international services from Terminal 2.",
+    "However, the Houthis said they had attacked Riyadh's airport again on Monday, calling it a \u201cmilitary target.\u201d The attacks have prompted international airlines to suspend services to the Saudi capital into November, while Delta Air Lines has postponed the launch of its Riyadh route until next year.",
+    "The disruption has forced several events in Riyadh to be cancelled or postponed, including Saudi Arabia's marquee investment conference, as flight cancellations hamper travel to and across the kingdom.",
+    "The upheaval also spread beyond the Saudi capital. More than 7,800 flights, or 45% of all scheduled departures from Saudi airports, were cancelled between October 8 and October 25, according to Cirium. The peak came on October 12, when cancellations exceeded 60% of scheduled flights nationwide.",
+    "Several major airports recorded severe disruption, including Riyadh at 86%, Dammam at 42% and Abha at 46.7%, where the Houthis have claimed strikes. A number of smaller regional airports saw the vast majority of flights cancelled, including Najran, near the Yemeni border, where all flights were cancelled."
+  ]},
+
 { slug:"serbia-student-list-wins", cat:"politics", title:"Vučić Concedes Defeat as Serbia's Student List Wins Parliamentary Election",
   excerpt:"Aleksandar Vučić conceded defeat on Sunday after Serbia's student-led movement won the snap parliamentary election, ending his long grip on power, with the Student List projected to take between 135 and 140 of the 250 seats.",
   author:"Elena Petrova", role:"Balkans Correspondent", date:"26 Oct 2026", read:3,
@@ -931,7 +948,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -947,11 +964,11 @@ var ARTICLES = [
     return '<article><span class="bignum">'+esc(a.type.toUpperCase())+'</span><h3><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></h3><p>'+esc(a.excerpt)+'</p><span class="meta">By <b style="color:#e8e9eb">'+esc(a.author)+'</b> · '+a.date+' · '+a.read+' min read</span></article>';
   }).join("");
 
-  var moreOrder = ["serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","serbia-election","eu-china-carbon","kelp-forests","tibet-earthquake","israel-election-crossings","india-uk-tech-talks","mumbai-baseball-cricket","imf-developing-economies"];
+  var moreOrder = ["houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","serbia-election","eu-china-carbon","kelp-forests","tibet-earthquake","israel-election-crossings","india-uk-tech-talks","mumbai-baseball-cricket","imf-developing-economies"];
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
