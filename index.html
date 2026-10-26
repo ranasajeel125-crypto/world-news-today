@@ -591,6 +591,20 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"gandhi-acquitted-defamation-case", cat:"world", title:"Indian Opposition Leader Rahul Gandhi Acquitted in Defamation Case",
+  excerpt:"A court in the northern town of Sultanpur acquitted Congress leader Rahul Gandhi on Monday in a defamation case over a 2018 campaign speech, television channels reported, as supporters celebrated outside the court.",
+  author:"Arjun Mehta", role:"South Asia Correspondent", date:"26 Oct 2026", read:3,
+  caption:"Gandhi was in court in Sultanpur, in Uttar Pradesh state, when the verdict was pronounced on Monday.",
+  source:{ name:"Reuters — Indian opposition leader Rahul Gandhi acquitted in defamation case, TV channels report", url:"https://www.reuters.com/world/india/indian-opposition-leader-rahul-gandhi-acquitted-defamation-case-tv-channels-2026-10-26/" },
+  tags:["india","rahul gandhi","congress","defamation","amit shah"],
+  body:[
+    "Rahul Gandhi, the leader of India's main opposition Congress party, was acquitted in a defamation case by a local court on Monday, television channels reported.",
+    "Gandhi, 56, the scion of the Nehru-Gandhi political dynasty and top leader of Congress, which has mostly ruled India since it gained independence from the British, was in court in the northern town of Sultanpur when the verdict was pronounced. His supporters burst crackers, beat drums and waved party flags as he left the court after the acquittal, images on television showed.",
+    "Gandhi was accused of calling India's Home Minister Amit Shah, who was then head of the ruling Bharatiya Janata Party (BJP), a \"murder accused\" during a state election campaign speech in 2018. The case was filed in Sultanpur town in Uttar Pradesh state by a BJP member, and the verdict was announced on Monday.",
+    "The acquittal comes at a time when Gandhi is leading a united opposition campaign against Prime Minister Narendra Modi and the Chief Election Commissioner over a controversial revision of voter lists.",
+    "A court in Modi's home state of Gujarat had convicted Gandhi in 2023 in a separate defamation case over a \"Modi surname\" remark, which briefly cost him his seat in parliament."
+  ]},
+
 { slug:"machado-returns-venezuela", cat:"world", title:"Nobel Winner Maria Corina Machado Returns to Venezuela After Nearly a Year Away",
   excerpt:"Venezuelan opposition leader Maria Corina Machado said on Sunday she had returned to Venezuela after nearly a year outside the country, announcing her arrival on social media and appearing at a church in Lara state.",
   author:"Rafael Costa", role:"Latin America Correspondent", date:"25 Oct 2026", read:3,
@@ -886,7 +900,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -902,11 +916,11 @@ var ARTICLES = [
     return '<article><span class="bignum">'+esc(a.type.toUpperCase())+'</span><h3><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></h3><p>'+esc(a.excerpt)+'</p><span class="meta">By <b style="color:#e8e9eb">'+esc(a.author)+'</b> · '+a.date+' · '+a.read+' min read</span></article>';
   }).join("");
 
-  var moreOrder = ["machado-returns-venezuela","czech-media-protests","france-protests-next-round","serbia-election","eu-china-carbon","kelp-forests","tibet-earthquake","israel-election-crossings","india-uk-tech-talks","mumbai-baseball-cricket","imf-developing-economies"];
+  var moreOrder = ["gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","serbia-election","eu-china-carbon","kelp-forests","tibet-earthquake","israel-election-crossings","india-uk-tech-talks","mumbai-baseball-cricket","imf-developing-economies"];
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
