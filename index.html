@@ -591,6 +591,21 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"serbia-student-list-wins", cat:"politics", title:"Vučić Concedes Defeat as Serbia's Student List Wins Parliamentary Election",
+  excerpt:"Aleksandar Vučić conceded defeat on Sunday after Serbia's student-led movement won the snap parliamentary election, ending his long grip on power, with the Student List projected to take between 135 and 140 of the 250 seats.",
+  author:"Elena Petrova", role:"Balkans Correspondent", date:"26 Oct 2026", read:3,
+  caption:"Crowds celebrated in Belgrade on Sunday night after Vučić conceded defeat to the student-backed list.",
+  source:{ name:"Reuters — Serbia's Vucic concedes defeat to student-led movement in parliamentary election", url:"https://www.reuters.com/world/europe/serbias-vucic-concedes-defeat-student-led-movement-parliamentary-election-2026-10-25/" },
+  tags:["serbia","vucic","student list","election","belgrade"],
+  body:[
+    "Serbia's Aleksandar Vučić conceded defeat to the student-led protest movement in parliamentary elections on Sunday, ending a long grip on power that began when he first became prime minister in 2014 and then president in 2017.",
+    "“We still do not have final results, on the basis of a sample ... it is clear that we have lost these elections, the Student List has won, they will have between 135 and 140 seats and we will have 105, no one else has entered parliament,” Vučić said.",
+    "Vučić, who resigned as president on September 27 to lead his coalition's list, had called the snap elections in September. They came after almost two years of student-led demonstrations against perceived corruption and creeping authoritarianism, triggered by the deaths of 16 people when a train station canopy collapsed in the city of Novi Sad in 2024.",
+    "In Belgrade on Sunday night, tens of thousands of people filled the city's main boulevards to celebrate, after a movement that began as street protests turned into the greatest threat to Vučić's rule since he first took power.",
+    "European Commission President Ursula von der Leyen congratulated the Student List on its victory, saying the Commission stood ready to support reforms on the rule of law, media freedom and the fight against corruption and to work together to advance Serbia's future in the European Union.",
+    "The students' win marks a profound political shift in the country of some 6 million people, and the disparate group of 250 student-backed candidates must now turn from protest and campaigning to governing."
+  ]},
+
 { slug:"lula-reelected-brazil", cat:"world", title:"Lula Wins Fourth Term as Brazil's President; Bolsonaro Refuses to Concede",
   excerpt:"Leftist President Luiz Inacio Lula da Silva won Brazil's presidential runoff on Sunday to secure a fourth non-consecutive term, the country's electoral authority said, while right-wing Senator Flavio Bolsonaro refused to concede and said he would seek to annul the result.",
   author:"Rafael Costa", role:"Latin America Correspondent", date:"26 Oct 2026", read:3,
@@ -916,7 +931,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -932,11 +947,11 @@ var ARTICLES = [
     return '<article><span class="bignum">'+esc(a.type.toUpperCase())+'</span><h3><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></h3><p>'+esc(a.excerpt)+'</p><span class="meta">By <b style="color:#e8e9eb">'+esc(a.author)+'</b> · '+a.date+' · '+a.read+' min read</span></article>';
   }).join("");
 
-  var moreOrder = ["lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","serbia-election","eu-china-carbon","kelp-forests","tibet-earthquake","israel-election-crossings","india-uk-tech-talks","mumbai-baseball-cricket","imf-developing-economies"];
+  var moreOrder = ["serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","serbia-election","eu-china-carbon","kelp-forests","tibet-earthquake","israel-election-crossings","india-uk-tech-talks","mumbai-baseball-cricket","imf-developing-economies"];
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
