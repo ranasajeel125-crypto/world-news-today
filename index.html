@@ -591,6 +591,23 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"machado-returns-venezuela", cat:"world", title:"Nobel Winner Maria Corina Machado Returns to Venezuela After Nearly a Year Away",
+  excerpt:"Venezuelan opposition leader Maria Corina Machado said on Sunday she had returned to Venezuela after nearly a year outside the country, announcing her arrival on social media and appearing at a church in Lara state.",
+  author:"Rafael Costa", role:"Latin America Correspondent", date:"25 Oct 2026", read:3,
+  caption:"Machado announced her return on social media on Sunday, with her press team sharing images of her in Lara state.",
+  source:{ name:"Reuters — Venezuela opposition leader Maria Corina Machado returns to Venezuela", url:"https://www.reuters.com/world/americas/venezuela-opposition-leader-maria-corina-machado-returns-venezuela-2026-10-25/" },
+  tags:["venezuela","maria corina machado","nobel peace prize","delcy rodriguez","donald trump"],
+  body:[
+    "Venezuelan opposition leader Maria Corina Machado has returned to Venezuela after nearly a year outside the country, she said on social media on Sunday.",
+    "\u201cI\u2019m here. With you all,\u201d the Nobel Peace Prize-winning Machado wrote on social media early on Sunday. Her press team shared images of her in central-western Lara state, in the Plaza del Pueblo de Santa Rosa, where she appeared at a church.",
+    "Machado was barred by Nicolas Maduro\u2019s government from exiting Venezuela, but she secretly left in late 2025 to receive the Nobel Peace Prize, after spending more than a year living mostly in hiding. She did not disclose more details about her current location or how she returned.",
+    "The issue of her return has strained her relationship with the US Trump administration, which she has sought to cultivate as an ally since before it removed President Nicolas Maduro from power in January. President Donald Trump has repeatedly expressed support for interim President Delcy Rodriguez, Maduro\u2019s former deputy, and hailed deals on oil production and other business ventures by US companies in Venezuela. Trump said in September it is too soon to consider democratic elections in Venezuela.",
+    "Speaking at the White House on Sunday, Trump said he did not know anything about Machado\u2019s return and suggested that the US would continue to back Rodriguez. \u201cShe\u2019s a very nice woman,\u201d he said, referring to Machado. \u201cBut we\u2019re doing really well in Venezuela.\u201d During an interview on Fox News on Sunday, Trump also said that the US had \u201ctotal control of Venezuela\u201d and that it was \u201ctaking out millions of barrels of oil a week.\u201d Neither the White House nor the Venezuelan communications ministry immediately responded to requests for comment on Machado\u2019s return.",
+    "Machado plans to meet with victims of the deadly earthquakes that struck Venezuela in June, as well as the families of political prisoners, the international community and various leaders from the democratic movement in Venezuela, David Smolansky, her top foreign affairs adviser, told Reuters. \u201cShe will work proactively for a date for free and fair elections,\u201d he added.",
+    "Machado has said only a \u201cserious, democratic government\u201d can provide the stability needed by investors. In June, she said she would do whatever it took to come home and help the survivors of devastating twin earthquakes that month that killed at least 6,500 people and left thousands missing. Her desire to return had caused friction in Washington, with US officials asking her to delay her trip, Reuters reported in June.",
+    "A faction of the opposition and the interim government held their latest session of talks this month, which aim to remake the top court and electoral council, among other goals, ahead of eventual elections. They do not include Machado\u2019s political movement. Edmundo Gonzalez, a former presidential candidate for Machado\u2019s movement who has been living in Spain, confirmed her return in his own post and said he would soon join her."
+  ]},
+
 { slug:"czech-media-protests", cat:"world", title:"Thousands Protest in Prague Over Czech Government's Public Media Overhaul",
   excerpt:"Thousands filled Prague's Old Town Square on Sunday after lawmakers gave initial backing to public media funding changes in a rare overnight vote, with critics warning the overhaul will leave Czech Television and Czech Radio vulnerable to political pressure.",
   author:"Maria Santos", role:"Europe Correspondent", date:"25 Oct 2026", read:3,
@@ -869,7 +886,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -885,11 +902,11 @@ var ARTICLES = [
     return '<article><span class="bignum">'+esc(a.type.toUpperCase())+'</span><h3><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></h3><p>'+esc(a.excerpt)+'</p><span class="meta">By <b style="color:#e8e9eb">'+esc(a.author)+'</b> · '+a.date+' · '+a.read+' min read</span></article>';
   }).join("");
 
-  var moreOrder = ["czech-media-protests","france-protests-next-round","serbia-election","eu-china-carbon","kelp-forests","tibet-earthquake","israel-election-crossings","india-uk-tech-talks","mumbai-baseball-cricket","imf-developing-economies"];
+  var moreOrder = ["machado-returns-venezuela","czech-media-protests","france-protests-next-round","serbia-election","eu-china-carbon","kelp-forests","tibet-earthquake","israel-election-crossings","india-uk-tech-talks","mumbai-baseball-cricket","imf-developing-economies"];
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
