@@ -591,6 +591,24 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"israel-votes-netanyahu-survival-test", cat:"world", title:"Netanyahu’s Political Survival on the Line as Israel Votes in First Election Since October 7 Attacks",
+  excerpt:"Prime Minister Benjamin Netanyahu faces a fight for political survival in Israel’s election on Tuesday, with voters weighing his leadership after the 2023 Hamas-led attacks, wars in Gaza and with Iran, and Israel’s deepening international isolation.",
+  author:"Layla Haddad", role:"Middle East Correspondent", date:"27 Oct 2026", read:4,
+  caption:"Tuesday’s vote is Israel’s first since the October 7, 2023, Hamas attacks, and the first chance for voters to judge the worst security failure in generations.",
+  source:{ name:"Reuters — Netanyahu’s political survival on the line as Israel votes", url:"https://www.reuters.com/world/middle-east/netanyahus-political-survival-line-israel-votes-2026-10-27/" },
+  tags:["israel","netanyahu","eisenkot","trump","iran","election","knesset"],
+  body:[
+    "Prime Minister Benjamin Netanyahu faces a fight for political survival in Israel's election on Tuesday, with voters weighing his leadership after the 2023 Hamas-led attacks, wars in Gaza and with Iran, and Israel's deepening international isolation.",
+    "Yet Netanyahu, Israel's longest-serving leader with 19 years in office, remains a formidable survivor, with nationalist politics increasingly entrenched and Israel's fragmented system potentially leaving him best placed to form a government.",
+    "Opinion polls show a close race between Netanyahu's Likud party and its right-wing allies and a rival alliance led by Gadi Eisenkot, a former military chief of staff and security hawk with backers on the right and in the centre.",
+    "Netanyahu is campaigning on his wartime leadership and his alliance with US President Donald Trump, who has endorsed him and joined Israel in waging war on Iran. Netanyahu said on Sunday that Trump was prepared to act again to “finally” remove the Iranian threat, but only if Netanyahu remained in power.",
+    "Eisenkot has accused Netanyahu of “relying on a campaign of fear-mongering, lies, and threats,” and said he was confident Trump would work “in full cooperation with any leader chosen by the people.”",
+    "Netanyahu may again depend on far-right leaders Itamar Ben-Gvir and Bezalel Smotrich to form a government. Both have faced sanctions from some Western countries that accuse them of inciting violence against Palestinians, while Ben-Gvir's Jewish Power party has gained support in opinion polls.",
+    "Neither Netanyahu nor Eisenkot has a clear path to power. If neither can form a governing coalition in the 120-seat parliament, Netanyahu could stay on as caretaker until another election is held next year. Polls open from 7 a.m. to 10 p.m. (0500 to 2000 GMT).",
+    "The election follows one of Israel's most turbulent periods since its establishment in 1948, shaped by the trauma of the October 7, 2023, Hamas attacks, Israel's subsequent military assault in Gaza and deep domestic divisions over the policies of Netanyahu's right-wing government. For many of his opponents, the election turns on accountability for the security failures of October 7, Israel's deadliest day.",
+    "Israel flattened much of Gaza in the offensive launched after October 7, when Hamas-led militants killed 1,200 people and took another 251 hostage. Gaza health authorities say Israeli attacks killed 74,000 people. Israel also dealt heavy blows to Iran-backed Hezbollah in Lebanon and traded strikes with Iran before a 12-day aerial campaign against Iranian nuclear sites in 2025 and this year's joint US-Israeli war. Eisenkot has said Israel's next government must prevent Iran from acquiring a military nuclear capability, either by force or through an “arrangement” such as a US-backed diplomatic solution.",
+    "Like nearly all Jewish-led parties in Israel, Eisenkot opposes the two-state solution that underpinned decades of peace negotiations with the Palestinians. But he has criticised Jewish settler violence against Palestinians in the Israeli-occupied West Bank, which has surged since 2023 and strained Israel's ties with Western states, and opposes Netanyahu's far-right coalition partners Ben-Gvir and Smotrich. A high turnout among voters from Israel's Arab minority could help nudge Israel's complex coalition arithmetic in favour of Eisenkot, though he has ruled out partnering with Arab parties. “My expectation is that we will have only a slight majority either way. No landslide,” said Israeli political analyst Amotz Asa-El of the Shalom Hartman Institute."
+  ]},
 { slug:"netanyahu-trump-endorsement-eve-vote", cat:"world", title:"Netanyahu Touts Trump Endorsement on Eve of Israel Vote, Hints at New War on Iran",
   excerpt:"Prime Minister Benjamin Netanyahu boasted of Donald Trump's endorsement on the eve of Israel's election on Tuesday, suggesting the two leaders could restart their war against Iran if he wins, after Trump said they should 'finish the job'.",
   author:"Layla Haddad", role:"Middle East Correspondent", date:"26 Oct 2026", read:3,
@@ -976,7 +994,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -996,7 +1014,7 @@ var ARTICLES = [
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
