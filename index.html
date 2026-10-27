@@ -591,6 +591,23 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"west-bank-protests-hebron-demolitions", cat:"world", title:"Palestinians Protest West Bank Demolitions as Israelis Vote, UN Says Over 3,000 Displaced",
+  excerpt:"Israeli troops fired a stun grenade on Tuesday to disperse Palestinians protesting a military operation that has displaced thousands from a neighbourhood in Hebron, as Israelis voted in an election in which the West Bank has been a major issue.",
+  author:"Layla Haddad", role:"Middle East Correspondent", date:"27 Oct 2026", read:4,
+  caption:"The United Nations said on Monday that more than 3,000 Palestinians had been forced from their homes by the Israeli military operation near Hebron.",
+  source:{ name:"Reuters \u2014 Palestinians protest against military demolitions in West Bank as Israelis vote", url:"https://www.reuters.com/world/middle-east/palestinians-protest-against-military-demolitions-west-bank-israelis-vote-2026-10-27/" },
+  tags:["west bank","hebron","palestinians","israel","netanyahu","election","un"],
+  body:[
+    "Israeli troops fired a stun grenade on Tuesday to disperse Palestinians who gathered to protest against an Israeli military operation that has displaced thousands of residents from a neighbourhood in Hebron in the Israeli-occupied West Bank.",
+    "The unrest, which follows the deaths of two Israeli soldiers shot by Palestinian gunmen at a checkpoint last week, unfolded as Israelis were voting in an election in which the country's posture in the West Bank has been a major political issue.",
+    "Some Palestinian officials have accused Prime Minister Benjamin Netanyahu of launching a crackdown in the West Bank to coincide with the vote, as a way to energise his right-wing supporters. The government says its operation is a response to the attack on its soldiers.",
+    "A group of Palestinian men, women, and children gathered at Tuesday's protest. One elderly man held a placard that said: \u201cNo to collective punishment, no to closures, and no to displacement.\u201d The military said it had fired a stun grenade to disperse them so that its operation could continue.",
+    "On Monday, the United Nations said that over 3,000 Palestinians had been forced from their homes by the Israeli military operation, which targeted neighbourhoods near the checkpoint where Palestinian gunmen killed the two Israeli soldiers on Friday. \u201cCollective punishment is a grave violation of international law,\u201d said UN human rights chief Volker Türk in a statement. \u201cThreats to empty and erase entire neighbourhoods also raise serious concerns of ethnic cleansing.\u201d",
+    "The Israeli military said in a statement on Sunday that troops would carry out demolitions in the area. It said soldiers had not located any weapons in searches of the houses. Since Friday's attack on the checkpoint, Israel has blocked the entrances to most Palestinian cities and towns across the West Bank, severely curtailing Palestinians' freedom of movement.",
+    "Noura Nassar, a displaced resident who attended the protests, said she had struggled to get medical treatment because of the blockages. \u201cWhere is the democracy in all of this? Their elections are today, sure, but what about us? Aren't we human beings? We want to go out, we want to visit the doctor,\u201d said Nassar.",
+    "Netanyahu and his main rival Gadi Eisenkot both oppose the creation of an independent Palestinian state alongside Israel. Residents expelled from the Hebron neighbourhood said Tuesday's election in Israel would do little to change the reality on the ground in territories Israel has occupied since 1967. \u201cAmong themselves they will elect who is the oppressor and who will destroy the Palestinian people. That is their election,\u201d said Sana' Salman Abu Sneineh, another expelled resident.",
+    "Netanyahu's government has presided over a rapid expansion of Israeli settlements, which are deemed illegal by UN bodies and most countries, though Israel disputes this. Under Netanyahu's right-wing coalition there has also been a surge of militant settler violence against Palestinians."
+  ]},
 { slug:"king-charles-caribbean-reparations-tour", cat:"world", title:"King Charles Heads to the Caribbean as Calls for Slavery Reparations Grow",
   excerpt:"King Charles begins a tour of the Bahamas, Guyana and Antigua and Barbuda on Tuesday, culminating in the Commonwealth summit, against a backdrop of increasingly vocal demands from the Caribbean that Britain pay reparations for its role in the slave trade.",
   author:"Maria Santos", role:"Europe Correspondent", date:"27 Oct 2026", read:4,
@@ -1023,7 +1040,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -1043,7 +1060,7 @@ var ARTICLES = [
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
