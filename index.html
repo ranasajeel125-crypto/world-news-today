@@ -591,6 +591,21 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"king-charles-caribbean-reparations-tour", cat:"world", title:"King Charles Heads to the Caribbean as Calls for Slavery Reparations Grow",
+  excerpt:"King Charles begins a tour of the Bahamas, Guyana and Antigua and Barbuda on Tuesday, culminating in the Commonwealth summit, against a backdrop of increasingly vocal demands from the Caribbean that Britain pay reparations for its role in the slave trade.",
+  author:"Maria Santos", role:"Europe Correspondent", date:"27 Oct 2026", read:4,
+  caption:"The tour runs from October 27 to November 4 and ends with the Commonwealth Heads of Government Meeting in Antigua and Barbuda.",
+  source:{ name:"Reuters \u2014 King Charles heads to Caribbean as calls for slavery reparations grow", url:"https://www.reuters.com/world/uk/king-charles-heads-caribbean-calls-slavery-reparations-grow-2026-10-27/" },
+  tags:["king charles","caribbean","commonwealth","reparations","bahamas","guyana","antigua"],
+  body:[
+    "King Charles heads to the Caribbean this week on a tour which comes against the backdrop of increasingly vocal demands from the region that Britain pays reparations for its role in the slave trade.",
+    "Charles and his wife Queen Camilla will first visit the Bahamas and Guyana, before heading to Antigua and Barbuda for the Commonwealth Heads of Government Meeting (CHOGM), the biennial get-together of the international organisation which he heads. The tour runs from October 27 to November 4.",
+    "At a previous meeting in 2022 of the leaders of the Commonwealth \u2014 a group of 56 nations which were mainly former British colonies \u2014 Charles expressed deep personal sorrow over slavery, and the issue is certain to be prominent once again.",
+    "Last month, CARICOM, the Caribbean Community, a group of 23 member and associate member states which includes the Bahamas, Barbados and Jamaica, said it would push for reparations to be on the CHOGM agenda. \u201cThe Caribbean has consistently asserted that reparations is fundamentally about justice,\u201d CARICOM\u2019s Secretary-General Carla Barnett said in a speech last month. \u201cIt is about recognition, accountability and transformation, and about building a just and equitable future for the descendants of those who, as the chattel of colonial owners, endured untold suffering, loss of life and freedom.\u201d",
+    "While Buckingham Palace has said the monarch would not shy away from Britain\u2019s involvement in the transatlantic slave trade during his tour, he would not formally apologise for it as some have wanted, in keeping with British government policy which also excludes making any financial reparations. \u201cIt is important to note here the work his majesty himself has done over many years both to acknowledge the wrongs of the past and to find creative ways to right inequalities that endure,\u201d a palace spokesperson said.",
+    "Shirley Botchwey, the secretary-general of the Commonwealth, which encompasses some 2.7 billion people, said last week the time had come for discussions about reparations, be they financial or in some other form such as the return of artefacts. As for an apology from the king, who remains the head of state of a number of Caribbean nations including both the Bahamas and Antigua and Barbuda, she told Sky News: \u201cIt wouldn\u2019t hurt to have that.\u201d",
+    "From the 15th to the 19th century, at least 12.5 million Africans were abducted and sold into slavery by European merchants, with Britain responsible for transporting an estimated 3.2 million people, making it the second most active European nation after Portugal."
+  ]},
 { slug:"syria-shuts-jordan-crossing-strikes", cat:"world", title:"Syria Shuts Its Only Border Crossing With Jordan After Airstrikes Kill Seven",
   excerpt:"Syria closed the Nassib border crossing with Jordan on Tuesday, suspending all passenger and commercial traffic, after Jordanian airstrikes on southern Syria killed seven people, including three children, according to Syrian officials.",
   author:"Layla Haddad", role:"Middle East Correspondent", date:"27 Oct 2026", read:4,
@@ -1008,7 +1023,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -1028,7 +1043,7 @@ var ARTICLES = [
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
