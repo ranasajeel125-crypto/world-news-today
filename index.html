@@ -591,6 +591,22 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"israel-exit-polls-netanyahu-bloc-no-majority", cat:"world", title:"Exit Polls: Netanyahu's Likud Leads but Loses Majority as Israel Faces Coalition Deadlock",
+  excerpt:"Initial exit polls after polls closed on Tuesday showed Prime Minister Benjamin Netanyahu's Likud as the largest party but his right-wing and religious bloc down to 50 seats in the 120-seat Knesset, with neither major bloc reaching the 61 seats needed to govern.",
+  author:"Layla Haddad", role:"Middle East Correspondent", date:"27 Oct 2026", read:4,
+  caption:"The projections are exit polls from Israel's three main television networks, not an official vote count, and could change as ballots are tallied in the coming days.",
+  source:{ name:"Fox News \u2014 Israelis vote in record numbers in first national election since the Oct. 7 Hamas massacre", url:"https://foxnews.com/world/israelis-vote-record-numbers-first-national-election-since-oct-7-hamas-massacre" },
+  tags:["israel","netanyahu","eisenkot","likud","yashar","exit polls","knesset","herzog"],
+  body:[
+    "Initial exit polls in Israel's election on Tuesday showed Prime Minister Benjamin Netanyahu's Likud emerging as the largest party but his governing coalition falling short of a parliamentary majority, potentially opening the door to a change in leadership after 19 years in office.",
+    "The projections released by Israel's three major television networks after polls closed at 10 p.m. local time showed Likud winning 25 seats in the 120-seat Knesset, compared with 23 seats for former military chief Gadi Eisenkot's Yashar party in the Channel 12 and Channel 13 exit polls, and 21 seats according to Kan 11.",
+    "The projected parliamentary balance showed 50 seats for Netanyahu's right-wing and religious bloc, 53 for the main opposition parties and 17 for Arab parties, leaving neither major bloc with the 61 seats generally needed to form a government. Although the opposition parties together with the Arab factions would hold a combined 70 seats, that does not mean they would necessarily agree to form a government together.",
+    "The vote was Israel's first national election since the October 7, 2023, Hamas attacks, and was widely seen as a referendum on Netanyahu's leadership after three years of war and continuing questions about responsibility for the security failures that allowed Hamas-led militants to kill about 1,200 people and abduct 251 others.",
+    "Turnout surged to a historic high, with 55.7% of eligible voters having cast their ballots by 4 p.m. local time, according to Israel's Central Elections Committee \u2014 the highest turnout recorded at that hour since measurements began in 1973. Election officials assured voters that anyone arriving at a polling station before the 10 p.m. deadline would be allowed to cast a ballot.",
+    "Netanyahu campaigned on his record of confronting Iran and its regional proxies and on his relationship with US President Donald Trump, who endorsed him before the vote. His opponents accused him of failing to accept responsibility for the October 7 security failures and opposed his government's approach to investigating them.",
+    "The results set the stage for potentially weeks of coalition negotiations. Once the final results are certified, President Isaac Herzog will consult with the newly elected factions and select the lawmaker he believes has the strongest chance of forming a government. That candidate will have 28 days to negotiate a governing coalition, with the possibility of a 14-day extension. Official results are scheduled to be published by November 4, and until a new government takes office, Netanyahu's outgoing government will remain in power.",
+    "Exit polls are preliminary projections, not an official vote count, and the political picture may change as ballots are counted and verified. If neither Netanyahu nor Eisenkot can assemble a governing coalition, Netanyahu could stay on as caretaker until another election is held."
+  ]},
 { slug:"west-bank-protests-hebron-demolitions", cat:"world", title:"Palestinians Protest West Bank Demolitions as Israelis Vote, UN Says Over 3,000 Displaced",
   excerpt:"Israeli troops fired a stun grenade on Tuesday to disperse Palestinians protesting a military operation that has displaced thousands from a neighbourhood in Hebron, as Israelis voted in an election in which the West Bank has been a major issue.",
   author:"Layla Haddad", role:"Middle East Correspondent", date:"27 Oct 2026", read:4,
@@ -1040,7 +1056,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -1060,7 +1076,7 @@ var ARTICLES = [
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
