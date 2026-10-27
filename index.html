@@ -591,6 +591,20 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"syria-shuts-jordan-crossing-strikes", cat:"world", title:"Syria Shuts Its Only Border Crossing With Jordan After Airstrikes Kill Seven",
+  excerpt:"Syria closed the Nassib border crossing with Jordan on Tuesday, suspending all passenger and commercial traffic, after Jordanian airstrikes on southern Syria killed seven people, including three children, according to Syrian officials.",
+  author:"Layla Haddad", role:"Middle East Correspondent", date:"27 Oct 2026", read:4,
+  caption:"Nassib is the only passenger and commercial border crossing between Jordan and Syria, and its closure cuts the main overland link between the two countries.",
+  source:{ name:"Reuters \u2014 Syria shuts border crossing with Jordan after strikes", url:"https://hkbusinesswire.com/syria-shuts-border-crossing-with-jordan-after-strikes/" },
+  tags:["syria","jordan","nassib","daraa","airstrikes","middle east"],
+  body:[
+    "Syria closed the Nassib border crossing with Jordan on Tuesday, suspending passenger and commercial traffic in both directions, after Jordanian airstrikes on southern Syria killed seven people, including three children and a woman, according to Syrian officials.",
+    "Syria\u2019s General Authority for Border Crossings and Customs said the closure was ordered because of developments on the ground in Daraa province, and was intended to ensure the safety of travellers and workers at the crossing. Nassib is Jordan\u2019s only passenger and commercial border crossing with Syria.",
+    "Jordan said on Monday that its air force had struck what it described as militant hideouts in southern Syria, after determining that the suspects behind last week\u2019s deadly church attack in the kingdom were linked to terrorist groups operating there. Jordan\u2019s armed forces said the operation was conducted in coordination with Damascus, but Syria\u2019s government gave a contradictory account, saying it had launched an investigation into the attacks and informing Jordan of its complete reservation over strikes carried out without prior coordination.",
+    "Syria\u2019s Civil Defence said in a preliminary report that seven people were killed and three others wounded, with emergency teams responding to four sites hit in the countryside of Daraa and Sweida provinces. It said five of the dead \u2014 a man, a woman and three children from one family \u2014 were killed in a strike on a tent in the village of Al Tai in Daraa, while an 80-year-old man was killed in Al Shayyah and a 60-year-old man in Shahba in Sweida province. Jordan said its strikes killed and wounded several militants and destroyed vehicles and sites, but gave no specific casualty figures.",
+    "The strikes were retaliation for Friday\u2019s attack during a funeral at a Greek Orthodox church in the village of Hamoud in Jordan\u2019s Karak governorate, in which gunmen opened fire for several minutes, killing nine people and wounding at least 34. Earlier on Monday, Jordanian security forces arrested two brothers and their brother-in-law after a shootout in the village of Al-Jadeeda, near Karak. The three suspects were wounded and no security personnel were injured, officials said, and there has been no claim of responsibility for the church attack.",
+    "Such violence is rare in Jordan, a relatively stable US ally in the Middle East, and King Abdullah ordered security forces to respond with an iron fist after the church attack. With investigations under way on both sides and diplomatic contacts continuing, the border closure leaves the two neighbours to manage a dispute over an operation one side calls coordinated and the other says it was never told about."
+  ]},
 { slug:"israel-votes-netanyahu-survival-test", cat:"world", title:"Netanyahu’s Political Survival on the Line as Israel Votes in First Election Since October 7 Attacks",
   excerpt:"Prime Minister Benjamin Netanyahu faces a fight for political survival in Israel’s election on Tuesday, with voters weighing his leadership after the 2023 Hamas-led attacks, wars in Gaza and with Iran, and Israel’s deepening international isolation.",
   author:"Layla Haddad", role:"Middle East Correspondent", date:"27 Oct 2026", read:4,
@@ -994,7 +1008,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -1014,7 +1028,7 @@ var ARTICLES = [
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
