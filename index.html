@@ -591,6 +591,20 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"ethiopia-oromiya-attacks-60-killed", cat:"world", title:"At Least 60 Killed in Two Attacks in Ethiopia's Oromiya Region, Orthodox Church Says",
+  excerpt:"At least 60 people were killed in two separate attacks in Ethiopia's conflict-hit Oromiya region in the past week, the Ethiopian Orthodox Church said, with the regional government and a source linked to a rebel alliance trading blame for the killings.",
+  author:"World News Today", role:"Africa Desk", date:"28 Oct 2026", read:4,
+  caption:"The Ethiopian Orthodox Church said 14 people were killed in Merti Woreda on 20 October and 46 in Sherka Woreda on 24 October; more than 20 homes were burned and more than 20 people were hospitalised with severe injuries.",
+  source:{ name:"Reuters \u2014 Attackers kill 60 people in Ethiopia's conflict-hit Oromiya region, Orthodox church says", url:"https://www.reuters.com/world/africa/attackers-kill-60-people-ethiopias-conflict-hit-oromiya-region-orthodox-church-2026-10-27/" },
+  tags:["ethiopia","oromiya","oromia","orthodox church","abiy ahmed","ola","rebel alliance"],
+  body:[
+    "At least 60 people were killed in two separate attacks in Ethiopia's conflict-hit Oromiya region in the past week, the Ethiopian Orthodox Church said, in one of the deadliest episodes of violence against civilians in the region in recent years.",
+    "Church authorities said the dead were all Christians but did not go into details on how they died or who was behind the attacks. The Holy Synod of the Ethiopian Orthodox Tewahedo Church said 14 believers were killed in Merti Woreda on 20 October and 46 in Sherka Woreda on 24 October, in a statement issued on Monday.",
+    "More than 20 homes were also burned and more than 20 people were hospitalised with severe injuries, the church's statement added, underscoring the scale of the assaults on rural communities in the Arsi Zone of Oromiya, Ethiopia's largest region.",
+    "The Oromiya regional government and a source linked to a rebel alliance fighting government forces traded blame for the attacks. The regional government said the rebel alliance launched the attacks to try to spark religious conflict, without providing evidence. The source linked to the rebel alliance said the Oromiya regional government had carried out the killings, citing conversations with two local residents.",
+    "The Oromo Liberation Army rebel group, which the regional government has blamed for previous attacks on Orthodox Christians, did not immediately respond to a request for comment. The OLA is one of seven armed groups that announced last month that they had formed an alliance aimed at overthrowing Prime Minister Abiy Ahmed's government.",
+    "The competing claims leave the question of responsibility unresolved, and the church has called for the perpetrators to be held to account. The attacks add to a long-running pattern of insecurity in Oromiya, where government forces have fought the OLA insurgency for years and civilians have repeatedly borne the brunt of the violence."
+  ]},
 { slug:"israel-exit-polls-netanyahu-bloc-no-majority", cat:"world", title:"Exit Polls: Netanyahu's Likud Leads but Loses Majority as Israel Faces Coalition Deadlock",
   excerpt:"Initial exit polls after polls closed on Tuesday showed Prime Minister Benjamin Netanyahu's Likud as the largest party but his right-wing and religious bloc down to 50 seats in the 120-seat Knesset, with neither major bloc reaching the 61 seats needed to govern.",
   author:"Layla Haddad", role:"Middle East Correspondent", date:"27 Oct 2026", read:4,
@@ -1056,7 +1070,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -1076,7 +1090,7 @@ var ARTICLES = [
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
