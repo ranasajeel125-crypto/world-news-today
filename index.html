@@ -591,6 +591,23 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"norway-premier-defends-putin-call-european-views", cat:"world", title:"Norway's Premier Defends Putin Call as Effort to Present European Views",
+  excerpt:"Norway's prime minister has defended a three-way call with Vladimir Putin and Finland's president, saying it was intended to ensure the Russian leader heard European as well as US views ahead of expected Ukraine talks in Abu Dhabi next month.",
+  author:"World News Today", role:"Europe Desk", date:"28 Oct 2026", read:3,
+  caption:"Tuesday's 90-minute call between Putin, Finnish President Alexander Stubb and Norwegian premier Jonas Gahr Stoere broke a longstanding practice among Western European leaders of shunning direct contact with the Kremlin.",
+  source:{ name:"Reuters", url:"https://www.reuters.com/world/europe/norways-premier-says-call-with-putin-was-effort-present-european-views-2026-10-28/" },
+  tags:["norway","putin","finland","stubb","stoere","ukraine","russia","abu dhabi"],
+  body:[
+    "Norway's prime minister defended on Wednesday a three-way call with Vladimir Putin and Finland's president, saying it was intended to ensure the Russian leader heard European as well as US views.",
+    "Tuesday's call between Russia's Putin, Finnish President Alexander Stubb and Norwegian premier Jonas Gahr Stoere broke a longstanding practice among Western European leaders of shunning direct contact with the Kremlin, and was criticised by allies including Denmark's Mette Frederiksen.",
+    "The 90-minute call came ahead of what are expected to be the first face-to-face talks since February between Ukrainian and Russian officials, in Abu Dhabi next month.",
+    "\"We (Stubb and I) were focused on looking forward, what must happen for this war to not continue endlessly for months, with people dying ... and it is even more difficult to find a solution,\" Stoere told public broadcaster NRK.",
+    "\"I don't think (Putin) will change his mind, but he gets to hear our position very clearly. I am worried that some of these messages do not reach him when the Americans talk to him,\" he said.",
+    "Norway, said Stoere, was keen to introduce de-escalation steps such as stopping attacks on energy infrastructure in Russia and Ukraine, halting strikes on ships exporting Ukrainian grain and conducting prisoner-of-war exchanges.",
+    "Asked whether there could be peace without Ukraine ceding territory, Stoere said: \"Today Russia controls nearly 20% (of Ukrainian territory). Ukraine will never sign a deal that recognises that they have lost territory, but whether they can take the current frontline as a reality and as a starting point, that is a different question.\"",
+    "\"And the big question is what kind of security guarantees can there be for the country (Ukraine) after a peace deal? Putin recognises that this is the big question.\"",
+    "Russian Foreign Minister Sergei Lavrov has said Tuesday's call offered nothing new on the Ukraine conflict, and that European countries were simply seeking a role in the negotiation process."
+  ]},
 { slug:"spain-high-speed-trains-collide-urda-deaths", cat:"world", title:"Dozens Killed as Two High-Speed Trains Collide in Central Spain",
   excerpt:"Two high-speed trains collided near Urda in Toledo province on Wednesday morning, killing at least 10 people, with later reports putting the toll far higher as rescue teams worked through derailed carriages on the Madrid\u2013Andalusia line.",
   author:"World News Today", role:"Europe Desk", date:"28 Oct 2026", read:3,
@@ -1098,7 +1115,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -1118,7 +1135,7 @@ var ARTICLES = [
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
