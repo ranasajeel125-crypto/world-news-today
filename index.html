@@ -591,6 +591,19 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"spain-high-speed-trains-collide-urda-deaths", cat:"world", title:"Dozens Killed as Two High-Speed Trains Collide in Central Spain",
+  excerpt:"Two high-speed trains collided near Urda in Toledo province on Wednesday morning, killing at least 10 people, with later reports putting the toll far higher as rescue teams worked through derailed carriages on the Madrid\u2013Andalusia line.",
+  author:"World News Today", role:"Europe Desk", date:"28 Oct 2026", read:3,
+  caption:"A Renfe AVE service travelling from Madrid to Seville ran into the rear of an Iryo train near Urda, knocking two carriages off the track and down an embankment; Madrid\u2013Andalusia high-speed services were suspended.",
+  source:{ name:"Reuters \u2014 Spain train crash live; The Times \u2014 Spain train crash live", url:"https://www.reuters.com/live/spain-train-crash-live-deaths-injuries-after-two-high-speed-trains-collide-near-2026-10-28/" },
+  tags:["spain","train crash","urda","toledo","renfe","iryo","madrid","andalusia"],
+  body:[
+    "Two high-speed trains collided on Wednesday morning near the town of Urda in Toledo province, central Spain, killing at least 10 people, with officials warning the death toll would almost certainly rise as rescue teams worked through the wreckage.",
+    "Rail infrastructure operator Adif said traffic on the Madrid\u2013Andalusia high-speed line was suspended after the collision, which Spanish media reported happened shortly before 9 a.m. local time between Los Y\u00e9benes and Urda, around 100 km south of Madrid. A Renfe AVE service travelling from Madrid to Seville ran into the rear of an Iryo train travelling in the same direction, knocking two carriages off the track and down an embankment, according to reports from El Pa\u00eds and state broadcaster RTVE. The regional 112 emergency service said the alert came at about 8:54 a.m.",
+    "The confirmed toll rose sharply through the morning. A spokeswoman for the Castilla-La Mancha regional government initially put the confirmed count at 10 and said it was likely to keep rising. Later reports put the toll far higher: The Times reported that emergency services had cited 39 dead, while the El Espa\u00f1ol website, citing regional civil protection sources, reported at least 46 killed. Those higher figures had not been confirmed by the central government at the time of publication, and the toll remained developing as firefighters, civil protection teams, medical helicopters and ambulances worked at the scene.",
+    "Prime Minister Pedro S\u00e1nchez said he was \u201cshocked\u201d by the accident, writing on X that he remained in constant contact with the transport minister and that emergency services were working on the ground to assist those affected. The regional government activated its emergency plan, and Renfe said all services between Madrid, Ciudad Real and Andalusia were suspended.",
+    "The crash is the second high-speed rail disaster on the same corridor in ten months. In January, two high-speed trains collided near Adamuz in C\u00f3rdoba, killing more than 40 people in what was then Spain's worst rail disaster in more than a decade. The cause of Wednesday's collision was not immediately known."
+  ]},
 { slug:"flavio-bolsonaro-arrives-us-passports-cancelled", cat:"world", title:"Defeated Candidate Fl\u00e1vio Bolsonaro Arrives in US After Brazil Cancels His Passports",
   excerpt:"Defeated Brazilian presidential candidate Fl\u00e1vio Bolsonaro has arrived in the United States, sources told the BBC, hours after Brazil cancelled his passports when he missed a Supreme Court deadline to hand them over \u2014 and after US President Donald Trump approved his entry, CNN reported.",
   author:"World News Today", role:"Americas Desk", date:"28 Oct 2026", read:4,
@@ -1085,7 +1098,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -1105,7 +1118,7 @@ var ARTICLES = [
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
