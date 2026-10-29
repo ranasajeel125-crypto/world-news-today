@@ -592,6 +592,22 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"eu-energy-ministers-soaring-fuel-prices-winter", cat:"world", title:"EU Energy Ministers to Meet as Fuel Prices Soar Ahead of Winter",
+  excerpt:"EU energy ministers will meet on Thursday to discuss energy security ahead of the winter heating season, as wars in Iran, Ukraine and Yemen send oil and natural gas prices soaring and European gas briefly touched \u20ac100 per megawatt-hour.",
+  author:"World News Today", role:"Europe Desk", date:"29 Oct 2026", read:2,
+  caption:"European wholesale gas prices briefly touched \u20ac100/MWh on Wednesday, the first time since December 2022, as the EU enters the winter heating season with gas stocks at only 75% of available storage.",
+  source:{ name:"Reuters", url:"https://www.reuters.com/business/energy/eu-energy-ministers-discuss-soaring-fuel-prices-winter-looms-2026-10-29/" },
+  tags:["eu","energy","gas prices","winter","jorgensen","iran","ukraine","yemen"],
+  body:[
+    "EU energy ministers will meet on Thursday to discuss energy security ahead of the winter heating season as the wars in Iran, Ukraine and Yemen send oil and natural gas prices soaring.",
+    "Fighting has damaged refineries across the Middle East and Russia, and hampered oil and gas flows through vital shipping lanes in the Black Sea, Red Sea and the Strait of Hormuz.",
+    "\"We are in a very serious situation now. It does not look like we have a security of supply issue but I would warn against neglecting that,\" EU Energy Commissioner Dan Jorgensen told reporters on Wednesday. He said affordability was just as urgent an issue, arguing that available supply meant little to households and businesses that could not afford it.",
+    "The Commission began talks with European refineries on Wednesday to find ways to boost output, including through the possible easing of some technical specifications.",
+    "Western powers also agreed this month to accelerate the release of over 400 million barrels of emergency oil stocks after US pressure.",
+    "EU countries will also discuss a Commission proposal to cut electricity bills through tax and grid fee reforms, such as by taxing electricity at a lower rate than natural gas.",
+    "The EU is entering the winter heating season with stocks at only 75% of available storage, versus 83% a year ago.",
+    "European wholesale gas prices briefly touched \u20ac100/MWh on Wednesday for the first time since December 2022, when Europe was reeling from the loss of most of its Russian pipeline gas supply. Prices have been rising as the conflict in the Middle East escalated, and are now trading at around triple pre-Iran war levels."
+  ]},
 { slug:"uk-healey-10-billion-extra-support-ukraine", cat:"world", title:"Britain to Give Extra \u00a310 Billion of Support to Ukraine, Healey Says",
   excerpt:"British finance minister John Healey has announced \u00a310 billion ($13.29 billion) of additional economic and military support for Ukraine, including \u00a3500 million in urgent military funding for this winter.",
   author:"World News Today", role:"Europe Desk", date:"28 Oct 2026", read:2,
@@ -1143,7 +1159,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["eu-energy-ministers-soaring-fuel-prices-winter","norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -1163,7 +1179,7 @@ var ARTICLES = [
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["uk-healey-10-billion-extra-support-ukraine","norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["eu-energy-ministers-soaring-fuel-prices-winter","uk-healey-10-billion-extra-support-ukraine","norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
