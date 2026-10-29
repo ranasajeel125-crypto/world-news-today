@@ -592,6 +592,19 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"ecb-president-lagarde-resigns-february-2027", cat:"business", title:"ECB President Lagarde Resigns, Will Step Down on 7 February 2027",
+  excerpt:"European Central Bank President Christine Lagarde has resigned and will step down on 7 February 2027, the ECB said on Thursday — months before her term was due to end in October 2027, opening the race to succeed one of the world's most powerful central bankers.",
+  author:"World News Today", role:"Business Desk", date:"29 Oct 2026", read:2,
+  caption:"Christine Lagarde informed the ECB Governing Council and European Council President António Costa on Thursday that she will step down on 7 February 2027, the ECB said.",
+  source:{ name:"Reuters", url:"https://www.reuters.com/business/finance/ecb-president-lagarde-resigns-effective-feb-7-2026-10-29/" },
+  tags:["ecb","lagarde","christine lagarde","interest rates","eurozone","antonio costa","knot","hernandez de cos"],
+  body:[
+    "European Central Bank President Christine Lagarde has resigned and will step down on 7 February 2027, the ECB said in a statement on Thursday.",
+    "\"European Central Bank President Christine Lagarde today informed the Governing Council and the President of the European Council António Costa that she will step down from her position on 7 February 2027,\" the ECB said.",
+    "Lagarde's term was scheduled to run until the end of October 2027, so her departure comes almost nine months early, after months of speculation about an early exit.",
+    "Her successor will be appointed by the European Council, and the ECB said the process for appointing the next president would be initiated without delay. The former central bank governors of the Netherlands and Spain, Klaas Knot and Pablo Hernández de Cos, are seen as frontrunners to replace her, Reuters reported.",
+    "The announcement came on the same day the ECB was due to announce its interest rate decision at 1315 GMT on Thursday, followed by Lagarde's regular press conference at 1345 GMT."
+  ]},
 { slug:"fed-holds-rates-strong-economy-muddies-outlook", cat:"business", title:"Fed Holds Rates Steady, Calling the Economy Strong — but Leaves Bond Investors Guessing",
   excerpt:"The US Federal Reserve kept interest rates steady on Wednesday as expected, upgrading its view of the economy to \"strong\" while giving bond investors little comfort about how much further policy may need to tighten.",
   author:"World News Today", role:"Business Desk", date:"29 Oct 2026", read:2,
@@ -1174,7 +1187,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["fed-holds-rates-strong-economy-muddies-outlook","eu-energy-ministers-soaring-fuel-prices-winter","norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["ecb-president-lagarde-resigns-february-2027","fed-holds-rates-strong-economy-muddies-outlook","eu-energy-ministers-soaring-fuel-prices-winter","norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -1194,7 +1207,7 @@ var ARTICLES = [
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["fed-holds-rates-strong-economy-muddies-outlook","eu-energy-ministers-soaring-fuel-prices-winter","uk-healey-10-billion-extra-support-ukraine","norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["ecb-president-lagarde-resigns-february-2027","fed-holds-rates-strong-economy-muddies-outlook","eu-energy-ministers-soaring-fuel-prices-winter","uk-healey-10-billion-extra-support-ukraine","norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
