@@ -592,6 +592,21 @@ var CATS = {
 };
 
 var ARTICLES = [
+{ slug:"fed-holds-rates-strong-economy-muddies-outlook", cat:"business", title:"Fed Holds Rates Steady, Calling the Economy Strong — but Leaves Bond Investors Guessing",
+  excerpt:"The US Federal Reserve kept interest rates steady on Wednesday as expected, upgrading its view of the economy to \"strong\" while giving bond investors little comfort about how much further policy may need to tighten.",
+  author:"World News Today", role:"Business Desk", date:"29 Oct 2026", read:2,
+  caption:"The Federal Reserve kept rates on hold on Wednesday and upgraded its assessment of the US economy to \"strong\", but the lack of a clear signal on future moves left longer-dated Treasury yields under pressure.",
+  source:{ name:"Reuters", url:"https://www.reuters.com/business/fed-highlights-economic-strength-muddies-outlook-treasuries-2026-10-29/" },
+  tags:["federal reserve","interest rates","treasuries","warsh","inflation","ecb"],
+  body:[
+    "The US Federal Reserve kept interest rates steady on Wednesday as expected, but it was not able to comfort bond investors concerned about what a deliberate pace of policy tightening will mean for the outlook for longer-term government bonds.",
+    "The central bank described an economy strong enough to keep inflation elevated, yet refrained from raising rates immediately. That deepened uncertainty over how much further policy may need to tighten, analysts said, and over how much compensation investors could demand to hold longer-dated Treasuries, which have soared this year to their highest yields in two decades.",
+    "The Fed upgraded its assessment of the economy to \"strong\" from the \"solid\" expansion seen as of the September meeting, while describing investment as robust and job gains as keeping pace with the workforce. But how that leads to price pressures coming down — the main priority for bond investors — was less clear.",
+    "\"Ultimately, if we see strong growth, which (Fed Chair Kevin) Warsh is expecting, we're going to see more inflation, which means those fiscal deficit concerns and how to address them longer term become more relevant,\" said Anders Persson, chief investment officer for global fixed income at investment manager Nuveen in Charlotte, North Carolina.",
+    "The yield curve steepened following Warsh's press conference, with the long end selling off. The spread between 2- and 10-year yields widened to as much as 34.1 basis points after flattening over the last few weeks.",
+    "Warsh did not give a definitive commitment on future policy action, and suggested the Fed's last rate increase is starting to work and that financial conditions have started to tighten. Financial markets are already pricing in the possibility of another increase in December, with expectations for further hikes next year adding to uncertainty over the policy outlook.",
+    "Attention now shifts to the other central banks meeting this week: the European Central Bank announces its decision later on Thursday and the Bank of Japan concludes a two-day meeting on Friday, with both expected to leave interest rates unchanged."
+  ]},
 { slug:"eu-energy-ministers-soaring-fuel-prices-winter", cat:"world", title:"EU Energy Ministers to Meet as Fuel Prices Soar Ahead of Winter",
   excerpt:"EU energy ministers will meet on Thursday to discuss energy security ahead of the winter heating season, as wars in Iran, Ukraine and Yemen send oil and natural gas prices soaring and European gas briefly touched \u20ac100 per megawatt-hour.",
   author:"World News Today", role:"Europe Desk", date:"29 Oct 2026", read:2,
@@ -1159,7 +1174,7 @@ var ARTICLES = [
   }
 
   /* ---------- Home renders ---------- */
-  var latestOrder = ["eu-energy-ministers-soaring-fuel-prices-winter","norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
+  var latestOrder = ["fed-holds-rates-strong-economy-muddies-outlook","eu-energy-ministers-soaring-fuel-prices-winter","norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","imf-developing-economies","israel-election-crossings","mumbai-baseball-cricket","india-uk-tech-talks","tibet-earthquake"];
   $("latestList").innerHTML = latestOrder.map(function(s){ return latestHTML(bySlug[s]); }).join("");
 
   var mostReadOrder = ["europe-protests","brazil-election","ukraine-starlink","india-new-zealand-cricket","luxury-markets"];
@@ -1179,7 +1194,7 @@ var ARTICLES = [
   $("moreHeadlines").innerHTML = moreOrder.map(function(s){ var a = bySlug[s];
     return '<li><span class="dot" aria-hidden="true">▸</span><a href="#/article/'+a.slug+'">'+esc(a.title)+'</a></li>'; }).join("");
 
-  var tickerItems = ["eu-energy-ministers-soaring-fuel-prices-winter","uk-healey-10-billion-extra-support-ukraine","norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
+  var tickerItems = ["fed-holds-rates-strong-economy-muddies-outlook","eu-energy-ministers-soaring-fuel-prices-winter","uk-healey-10-billion-extra-support-ukraine","norway-premier-defends-putin-call-european-views","spain-high-speed-trains-collide-urda-deaths","flavio-bolsonaro-arrives-us-passports-cancelled","ethiopia-oromiya-attacks-60-killed","israel-exit-polls-netanyahu-bloc-no-majority","west-bank-protests-hebron-demolitions","king-charles-caribbean-reparations-tour","syria-shuts-jordan-crossing-strikes","israel-votes-netanyahu-survival-test","houthi-attacks-saudi-flights","serbia-student-list-wins","lula-reelected-brazil","gandhi-acquitted-defamation-case","machado-returns-venezuela","czech-media-protests","france-protests-next-round","europe-protests","serbia-election","brazil-election","typhoon-champi","ukraine-starlink","tibet-earthquake","india-new-zealand-cricket"];
   var tickerHTML = tickerItems.map(function(s){ var a = bySlug[s]; return '<a href="#/article/'+a.slug+'">'+esc(a.title)+'</a>'; }).join("");
   $("tickerMove").innerHTML = tickerHTML + tickerHTML; /* duplicated for a seamless loop */
 
